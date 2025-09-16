@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<addons><addon id="plugin.program.megawizard" name="MegaKodi" version="1.0.0" provider-name="MK">
+    <requires>
+        <import addon="xbmc.python" version="1.0.0" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.six" />
+        <import addon="script.kodi.android.update" optional="true" version="1.1.7" />
+    </requires>
+
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>executable</provides>
+    </extension>
+
+    <extension point="xbmc.service" library="startup.py" start="startup" />
+
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">[COLOR blue]MK[/COLOR]Wizard</summary>
+        <description lang="en">[COLOR blue]MegaKodi[/COLOR]Wizard offers many maintenance features, selective add-on data saving, and automated build installs.</description>
+        <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <source>http://adri-kodi.com/leiaxx/plugin.program.adriwizard.zip</source>
+        <news>
+2.0.0
+ - Kodi 19 ready
+ - Initial Commit
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon><addon id="repository.megakodi" name="Mega_Kodi_Repository" version="1.0" provider-name="YOUR_USERNAME_HERE">
+    <extension point="xbmc.addon.repository" name="Mega Kodi Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/megakodibuild/mega.repository/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/megakodibuild/mega.repository/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/megakodibuild/megakodi.repository/master/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Mega_Kodi_Repository</summary>
+        <description>Welcome to Mega Kodi.</description>
+        <disclaimer />
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon></addons>
